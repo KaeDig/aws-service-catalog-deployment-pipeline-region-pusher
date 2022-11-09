@@ -78,8 +78,3 @@ variable "salt" {
   description = "Salting for variable names allowing for multiple users."
   type = string
 }
-
-variable "deployment_region" {
-  description = "The region the product is deployed in."
-  type = string
-}
