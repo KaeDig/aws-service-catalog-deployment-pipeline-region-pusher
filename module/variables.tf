@@ -74,12 +74,6 @@ variable "tags" {
   default     = {}
 }
 
-variable "template_region" {
-  description = "The region in which the service catalog item is deployed to from the pipeline"
-  type        = string
-  default     = "eu-west-2"
-}
-
 variable "salt" {
   description = "Salting for variable names allowing for multiple users."
   type = string

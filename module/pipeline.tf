@@ -13,7 +13,6 @@ resource "aws_codepipeline" "codepipeline" {
   artifact_store {
     location = aws_s3_bucket.artifact_store.bucket
     type     = "S3"
-    region   = "eu-west-2"
   }
 
   stage {
@@ -89,7 +88,6 @@ resource "aws_codepipeline" "codepipeline" {
         "ProductVersionName" = "1"
         "TemplateFilePath"   = var.template_path
       }
-      region = var.template_region
     }
   }
 

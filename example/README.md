@@ -32,7 +32,7 @@ Next, we need to initialize the terraform inside the ./examples directory:
 ```
 terraform init
 ```
-
+s
 Next, we are ready to deploy. Run:
 
 ```
