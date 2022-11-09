@@ -37,9 +37,3 @@ module "service_catalog_deployment_pipeline" {
 provider "aws" {
   region = var.deployment_region
 }
-
-variable "deployment_region" {
-  description = "The region which infrastructure will be deployed in. Make sure bucket exists in this region."
-  type        = string
-  default     = "eu-west-2"
-}
