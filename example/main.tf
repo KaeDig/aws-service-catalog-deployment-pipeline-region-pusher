@@ -15,6 +15,7 @@ module "service_catalog_deployment_pipeline" {
   template_bucket     = aws_s3_bucket.template_store
   template_zip_object = aws_s3_object.template
   template_path       = basename(data.archive_file.template.source_file)
+  salt                = var.product_name
 
   # This is the service catalog product that we are deploying to
   service_catalog_product = aws_servicecatalog_product.template
@@ -31,4 +32,14 @@ module "service_catalog_deployment_pipeline" {
   tags = {
     "Environment" = "dev"
   }
+}
+
+provider "aws" {
+  region = var.deployment_region
+}
+
+variable "deployment_region" {
+  description = "The region which infrastructure will be deployed in. Make sure bucket exists in this region."
+  type        = string
+  default     = "eu-west-2"
 }

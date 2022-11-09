@@ -76,5 +76,5 @@ variable "tags" {
 
 variable "salt" {
   description = "Salting for variable names allowing for multiple users."
-  type = string
+  type        = string
 }

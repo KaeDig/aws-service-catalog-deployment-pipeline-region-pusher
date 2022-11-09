@@ -30,3 +30,14 @@ variable "product_description" {
   type        = string
   default     = "Example product deployed from https://github.com/porrige51122/aws-service-catalog-deployment-pipeline"
 }
+
+variable "salt" {
+  description = "Salting for variable names allowing for multiple users."
+  type        = string
+}
+
+variable "deployment_region" {
+  description = "The region which infrastructure will be deployed in. Make sure bucket exists in this region."
+  type        = string
+  default     = "eu-west-2"
+}
