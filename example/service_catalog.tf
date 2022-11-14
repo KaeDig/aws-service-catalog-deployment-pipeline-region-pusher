@@ -21,7 +21,7 @@ resource "aws_servicecatalog_product" "template" {
 
   provisioning_artifact_parameters {
     name         = "1"
-    template_url = "https://gist.github.com/porrige51122/7ddea578fd23d45fced948365da226aa/raw" # Blank Cloudformation Template
-    type         = "CLOUD_FORMATION_TEMPLATE"
+    template_url = "https://${data.aws_s3_bucket.template_store.bucket}.s3.${var.deployment_region}.amazonaws.com/template.json"
+    type = "CLOUD_FORMATION_TEMPLATE"
   }
 }
